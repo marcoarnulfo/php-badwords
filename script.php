@@ -1,13 +1,11 @@
 <?php
-/*
-var_dump($_GET);
-*/
+
 $paragraph = $_GET['paragraph'];
 $censured = $_GET['censured'];
 
-$censura = str_replace($censured, '', '***');
+$censura = str_replace($censured, '***', $paragraph);
 
-$results = $paragraph . strlen($paragraph) . $censura ;
+$results = $censura . strlen($paragraph);
 
 
 ?>
@@ -22,9 +20,6 @@ $results = $paragraph . strlen($paragraph) . $censura ;
 </head>
 <body>
 
-
-    <p> <?php echo $paragraph . strlen($paragraph); ?> </p>
-    <p> <?php echo $paragraph . strlen($paragraph) . $censura; ?> </p>
     <p><?php echo $results ?></p>
 
 </body>
